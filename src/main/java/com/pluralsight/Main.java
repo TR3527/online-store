@@ -65,7 +65,69 @@ public class Main {
             System.out.println(product);
         }
         // TODO: let the customer search or filter the list
+        System.out.print(("Filter by department: 1-Audio Video, 2-Computers, 3-Games, 4-Electronics: "));
+        String userFilter = scanner.nextLine().trim();
+
+        //String filteredProduct;
+
+        if(userFilter.equals("1")){
+
+            for (Product filteredProduct: inventory){
+
+                if(filteredProduct.getDepartment().equalsIgnoreCase("Audio Video")){
+
+                    System.out.println(filteredProduct);
+
+                }
+
+            }
+        }else if(userFilter.equals("2")){
+
+
+            for (Product filteredProduct2: inventory){
+
+                if(filteredProduct2.getDepartment().equalsIgnoreCase("Computers")){
+
+                    System.out.println(filteredProduct2);
+
+                }
+
+            }
+
+
+        }else if(userFilter.equals("3")){
+
+            for (Product filteredProduct3: inventory){
+
+                if(filteredProduct3.getDepartment().equalsIgnoreCase("Games")){
+
+                    System.out.println(filteredProduct3);
+
+                }
+
+            }
+
+
+        }else if(userFilter.equals("4")){
+
+            for (Product filteredProduct4: inventory){
+
+                if(filteredProduct4.getDepartment().equalsIgnoreCase("Electronics")){
+
+                    System.out.println(filteredProduct4);
+
+                }
+
+            }
+
+        }else{
+            System.out.println("Invalid department choice!");
+        }
+
         // TODO: let the customer add a product to the cart (by SKU)
+
+
+
         // TODO: let the customer go back to the home screen
     }
 
